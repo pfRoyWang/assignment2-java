@@ -33,7 +33,7 @@ jobs:
             sudo apt-get install -y java
             mvn test
 
-      -run:
+      - run:
           command:
             sudo sh ~/repo/ci/scripts/deliver.sh
 
