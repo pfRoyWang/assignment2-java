@@ -32,6 +32,7 @@ jobs:
           command: 
             apt-get install -y maven
             sh mvn test
+            sudo chmod 755 ~/repo/ci/scripts/deliver.sh
             sudo sh ~/repo/ci/scripts/deliver.sh
 
       - store_test_results:
