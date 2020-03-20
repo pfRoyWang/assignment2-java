@@ -27,4 +27,5 @@ jobs:
       
 
       # run tests!
-      - run: gradle build ~/repo/ci/scripts/deliver.sh
+      - run:
+      - run: gradle build /ci/scripts/deliver.sh
