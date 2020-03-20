@@ -27,10 +27,16 @@ jobs:
       # run tests!
       - run: gradle build 
 
+      - run:
+          command:
+            apt-get install -y maven
+
+      - run:
+          command:
+            apt-get install -y java
 
       - run:
           command: 
-
             sudo sh ~/repo/ci/scripts/deliver.sh
 
       - store_test_results:
