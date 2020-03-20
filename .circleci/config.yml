@@ -30,9 +30,9 @@ jobs:
 
       - run:
           command: 
-            apt-get install -y maven
-            sh mvn test
-            sh ~/repo/ci/scripts/deliver.sh
+            - apt-get install -y maven
+            - sh mvn test
+            - sh ~/repo/ci/scripts/deliver.sh
 
       - store_test_results:
-          path: test-results
+          path: ~/repo
