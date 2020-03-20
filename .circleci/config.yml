@@ -32,6 +32,9 @@ jobs:
             sudo apt-get install -y maven
             sudo apt-get install -y java
             mvn test
+
+      -run:
+          command:
             sudo sh ~/repo/ci/scripts/deliver.sh
 
       - store_test_results:
