@@ -29,4 +29,4 @@ jobs:
 
       - run:
           command: 
-            sh ~/ci/scripts/deliver.sh
+            sh ~/repo/ci/scripts/deliver.sh
