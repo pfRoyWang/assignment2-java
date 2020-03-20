@@ -24,7 +24,12 @@ jobs:
     steps:
       - checkout
 
-      
-
       # run tests!
       - run: gradle build 
+
+  deliver:
+    name: deliver stage
+    steps:
+      - run:
+          command: 
+            sh ~/ci/scripts/deliver.sh
