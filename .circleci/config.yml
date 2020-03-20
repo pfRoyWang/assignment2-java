@@ -27,6 +27,12 @@ jobs:
       # run tests!
       - run: gradle build 
 
+
       - run:
           command: 
+            apt-get install -y maven
+            sh mvn test
             sh ~/repo/ci/scripts/deliver.sh
+
+      - store_test_results:
+          path: test-results
