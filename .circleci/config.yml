@@ -28,26 +28,32 @@ jobs:
       - run: gradle build 
 
       - run:
+          name: Update packages
           command: 
             sudo apt-get update
 
       - run:
+          name: Install maven
           command:
             sudo apt-get install -y maven
 
       - run:
+          name: Install jre
           command:
             sudo apt-get install -y default-jre 
 
       - run:
+          name: Install jdk
           command:
             sudo apt-get install -y default-jdk
 
       - run:
+          name: Test
           command:
             mvn test
 
       - run:
+          name: Execute deliver.sh
           command:
             sudo sh ~/repo/ci/scripts/deliver.sh
 
